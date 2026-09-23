@@ -1,0 +1,28 @@
+Fungsi SelesaikanSudoku(grid):
+    Untuk baris dari 0 hingga 8:
+        Untuk kolom dari 0 hingga 8:
+            Jika grid[baris][kolom] == 0:
+                Untuk angka dari 1 hingga 9:
+                    Tambah JumlahIterasi (sebagai satu usaha penempatan)
+                    
+                    Jika Valid(grid, baris, kolom, angka):
+                        grid[baris][kolom] = angka
+                        
+                        Jika SelesaikanSudoku(grid) == BENAR:
+                            Kembalikan BENAR
+                            
+                        grid[baris][kolom] = 0 
+                
+                Kembalikan SALAH 
+                
+    Kembalikan BENAR
+
+Fungsi Valid(grid, baris, kolom, angka):
+    Jika angka ditemukan di baris ATAU kolom tersebut: 
+        Kembalikan SALAH
+        
+    Jika angka ditemukan di dalam kotak 3x3 tempat sel berada: 
+        Kembalikan SALAH
+        
+    Kembalikan BENAR
+// FUNGSI SELESAI
